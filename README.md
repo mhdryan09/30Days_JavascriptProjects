@@ -14,3 +14,7 @@ Link : https://mhdryan09.github.io/30Days_JavascriptProjects/PasswordGenerator/i
 
 ## 5. Notes App
 Link : https://mhdryan09.github.io/30Days_JavascriptProjects/NotesApp/index.html
+
+## 6. Age Calculator App
+Link : https://mhdryan09.github.io/30Days_JavascriptProjects/AgeCalculator/index.html
+
