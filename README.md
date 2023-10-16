@@ -18,3 +18,6 @@ Link : https://mhdryan09.github.io/30Days_JavascriptProjects/NotesApp/index.html
 ## 6. Age Calculator App
 Link : https://mhdryan09.github.io/30Days_JavascriptProjects/AgeCalculator/index.html
 
+## 7. Quote Generator App
+Link : https://mhdryan09.github.io/30Days_JavascriptProjects/QuoteGenerator/index.html
+
