@@ -21,3 +21,6 @@ Link : https://mhdryan09.github.io/30Days_JavascriptProjects/AgeCalculator/index
 ## 7. Quote Generator App
 Link : https://mhdryan09.github.io/30Days_JavascriptProjects/QuoteGenerator/index.html
 
+## 8. QR Code Generator App
+Link : https://mhdryan09.github.io/30Days_JavascriptProjects/QRCodeGenerator/index.html
+
