@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Toast Notification</title>
+		<link rel="stylesheet" href="style.css" />
+		<!-- Font Awesome -->
+		<script src="https://kit.fontawesome.com/f4cfc3dcca.js" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<div class="buttons">
+			<button onclick="showToast(succesMessage)">Success</button>
+			<button onclick="showToast(errorMessage)">Error</button>
+			<button onclick="showToast(invalidMessage)">Invalid</button>
+		</div>
+
+		<div id="toastBox"></div>
+
+		<script>
+			let toastBox = document.getElementById("toastBox");
+
+			let succesMessage = '<i class="fa-solid fa-circle-check"></i> Successfully Submitted';
+			let errorMessage = '<i class="fa-solid fa-circle-xmark"></i> Please fix the Error';
+			let invalidMessage = '<i class="fa-solid fa-circle-exclamation"></i> Invalid Input, check again!';
+
+			function showToast(msg) {
+				// Membuat elemen toast baru
+				let toast = document.createElement("div");
+				toast.classList.add("toast");
+
+				// Menambahkan pesan ke dalam elemen toast
+				toast.innerHTML = msg;
+
+				// Menambahkan elemen toast ke dalam elemen dengan id "toastBox"
+				toastBox.appendChild(toast);
+
+				if (msg.includes("Error")) {
+					toast.classList.add("error");
+				} else if (msg.includes("Invalid")) {
+					toast.classList.add("invalid");
+				}
+
+				// Mengatur timeout untuk menghapus elemen toast setelah 6 detik
+				setTimeout(() => {
+					toast.remove();
+				}, 6000);
+			}
+		</script>
+	</body>
+</html>

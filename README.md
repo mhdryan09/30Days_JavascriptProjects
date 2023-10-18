@@ -24,3 +24,6 @@ Link : https://mhdryan09.github.io/30Days_JavascriptProjects/QuoteGenerator/inde
 ## 8. QR Code Generator App
 Link : https://mhdryan09.github.io/30Days_JavascriptProjects/QRCodeGenerator/index.html
 
+## 9. Toast Notification App
+Link : https://mhdryan09.github.io/30Days_JavascriptProjects/ToastNotification/index.html
+
