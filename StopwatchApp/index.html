@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stopwatch App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="stopwatch">
+    <h1 id="displayTime">00:00:00</h1>
+    <div class="buttons">
+      <img src="images/stop.png" alt="stop" onclick="watchStop()">
+      <img src="images/start.png" onclick="watchStart()" alt="play">
+      <img src="images/reset.png" alt="reset" onclick="resetStop()">
+    </div>
+  </div>
+
+  <script>
+    let [seconds, minutes, hours] = [0, 0, 0];
+    let displayTime = document.getElementById('displayTime');
+    let timer = null;
+
+    function stopwatch() {
+      seconds++; // tambah 1 detik
+      if(seconds == 60) { // jika sudah sampai 60 detik
+        seconds = 0; // reset ke 0
+        minutes++; // menit jadi 1
+
+        if(minutes == 60) { // jika sampai 60 menit
+          minutes = 0; // reset ke 0
+          hours++; // jam jadi 1
+        }
+      }
+
+      let h = hours < 10 ? "0" + hours : hours; // menampilkan jam dengan menambahkan 0 jika kurang dari 10 
+      let m = minutes < 10 ? "0" + minutes : minutes; // menampilkan menit dengan menambahkan 0 jika kurang dari 10
+      let s = seconds < 10 ? "0" + seconds : seconds; // menampilkan detik dengan menambahkan 0 jika kurang dari 10 
+
+      displayTime.innerHTML = h + ":" + m + ":" + s; // menampilkan jam, menit, dan detik
+    }
+
+    function watchStart() {
+      if(timer !== null ) { // jika timer tidak null 
+        clearInterval(timer); // clearInterval untuk menghentikan timer
+      }
+      timer = setInterval(stopwatch, 1000); // setInterval untuk memulai timer setiap 1 detik 
+    }
+
+    function watchStop() {
+      clearInterval(timer); // menghentikan timer setiap 1 detik
+    }
+
+    function resetStop() {
+      clearInterval(timer); // menghentikan timer setiap 1 detik
+      [seconds, minutes, hours] = [0, 0, 0]; // reset timer 
+      displayTime.innerHTML = "00:00:00"; // menampilkan jam, menit, dan detik
+    }
+
+  </script>
+</body>
+</html>
